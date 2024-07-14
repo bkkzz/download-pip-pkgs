@@ -1,0 +1,48 @@
+name: Download pip pkgs
+
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened]
+  push:
+    branches:
+      - master
+    paths:
+      - down_pip_pkgs.py
+
+jobs:
+  pip_pkgs:
+    name: Download pip whl
+    # todo download pkg in more os
+    runs-on: ubuntu-latest
+    if: github.repository_owner_id == github.event.issue.user.id || github.event_name == 'push'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+          cache: pip
+          cache-dependency-path: "requirements.txt"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: pip install and save
+        run: |
+          source venv/bin/activate
+          python down_pip_pkgs.py ${{ secrets.ACTION_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+
+      - name: Push pip pkgs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add pip_pkgs/*
+          pkg_info=$(head -1 pip_pkgs/pkg-list.txt)
+          git commit -a -m "add pip pkg: $pkg_info" || echo "nothing to commit"
+          git push || echo "nothing to push"
