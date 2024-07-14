@@ -1,0 +1,7 @@
+requests==2.32.3 ============
+total 552K
+-rw-r--r-- 1 runner docker 160K Jul 14 07:07 certifi-2024.7.4-py3-none-any.whl
+-rw-r--r-- 1 runner docker 138K Jul 14 07:07 charset_normalizer-3.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+-rw-r--r-- 1 runner docker  66K Jul 14 07:07 idna-3.7-py3-none-any.whl
+-rw-r--r-- 1 runner docker  64K Jul 14 07:07 requests-2.32.3-py3-none-any.whl
+-rw-r--r-- 1 runner docker 119K Jul 14 07:07 urllib3-2.2.2-py3-none-any.whl
