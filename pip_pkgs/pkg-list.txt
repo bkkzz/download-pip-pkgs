@@ -1,3 +1,2 @@
-PyMySQL==1.1.1 ============
-total 44K
--rw-r--r-- 1 runner docker 44K Jul 14 07:43 PyMySQL-1.1.1-py3-none-any.whl
+pandas==2.2.2 ============
+total 0
