@@ -49,10 +49,6 @@ def main(token, repo_name, issue_number):
             if is_me(c, me):
                 print('comment.body=', c.body)
     download_pip_pkgs(issue)
-    # todo rm
-    files = os.listdir('.')
-    for f in files:
-        print('list dir f=', f)
     print('download ok!')
 
 
