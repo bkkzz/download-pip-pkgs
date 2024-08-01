@@ -1,8 +1,4 @@
-pandas==2.2.2 ============
-total 32M
--rw-r--r-- 1 runner docker  19M Aug  1 15:14 numpy-2.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
--rw-r--r-- 1 runner docker  13M Aug  1 15:14 pandas-2.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
--rw-r--r-- 1 runner docker 225K Aug  1 15:14 python_dateutil-2.9.0.post0-py2.py3-none-any.whl
--rw-r--r-- 1 runner docker 494K Aug  1 15:14 pytz-2024.1-py2.py3-none-any.whl
--rw-r--r-- 1 runner docker  11K Aug  1 15:14 six-1.16.0-py2.py3-none-any.whl
--rw-r--r-- 1 runner docker 338K Aug  1 15:14 tzdata-2024.1-py2.py3-none-any.whl
+openpyxl==3.1.5 ============
+total 256K
+-rw-r--r-- 1 runner docker 4.6K Aug  1 15:23 et_xmlfile-1.1.0-py3-none-any.whl
+-rw-r--r-- 1 runner docker 246K Aug  1 15:23 openpyxl-3.1.5-py2.py3-none-any.whl
